@@ -1,1 +1,1 @@
-```npx postcss style.css -o output.css```
+```npx postcss style.css -o build/output.css```
