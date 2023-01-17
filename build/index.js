@@ -8,10 +8,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
 const app = express();
-const { readFile } = require('fs').promises;
+const fs_1 = __importDefault(require("fs"));
 app.use(express.static('./build'));
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
@@ -23,7 +26,7 @@ app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         }
         else {
             console.log('Desktop');
-            res.send(yield readFile('./index.html', 'utf8'));
+            res.send(yield fs_1.default.promises.readFile('./index.html', 'utf8'));
         }
     }
     catch (e) {

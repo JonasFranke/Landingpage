@@ -1,7 +1,7 @@
-import {Request, response, Response} from "express";
+import {Request, Response} from "express";
 const express = require('express');
 const app = express();
-const { readFile } = require('fs').promises;
+import fs from 'fs';
 
 app.use(express.static('./build'));
 
@@ -14,7 +14,8 @@ app.get('/', async (req: Request, res: Response) => {
             res.status(500).send("Mobile site still in development");
         } else {
             console.log('Desktop');
-            res.send(await readFile('./index.html', 'utf8'));
+            const html = await fs.promises.readFile('./index.html', 'utf8');
+            res.send(html);
         }
     } catch (e) {
         console.log(e);
