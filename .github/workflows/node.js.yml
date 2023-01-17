@@ -27,7 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Setup env
-      run: npm install express && npm install typescript && npm install tailwindcss && npm install postcss-cli
+      run: npm install express && npm install typescript && npm install tailwindcss && npm install postcss-cli && npm install nodemon && npm install --save-dev @types/express autoprefixer nodemon
     - run: npm ci
     - name: Build
       run: ls && tsc && npx postcss styles.css -o build/output.css
