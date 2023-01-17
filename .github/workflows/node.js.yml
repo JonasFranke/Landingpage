@@ -30,6 +30,7 @@ jobs:
       run: npm install express && npm install typescript && npm install tailwindcss && npm install postcss-cli && npm install nodemon && npm install --save-dev @types/express autoprefixer nodemon
     - run: npm ci
     - name: Build
-      run: ls && tsc && npx postcss styles.css -o build/output.css
+      run: ls && tsc
+    - run: npx postcss styles.css -o build/output.css
     - run: npm run build --if-present
     - run: npm test
