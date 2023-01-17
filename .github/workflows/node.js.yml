@@ -31,6 +31,6 @@ jobs:
     - run: npm ci
     - name: Build
       run: ls && tsc
-    - run: npx postcss styles.css -o build/output.css
+    - run: npx postcss style.css -o build/output.css
     - run: npm run build --if-present
     - run: npm test
