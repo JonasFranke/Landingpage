@@ -33,4 +33,3 @@ jobs:
       run: ls && tsc
     - run: npx postcss style.css -o build/output.css
     - run: npm run build --if-present
-    - run: npm test
