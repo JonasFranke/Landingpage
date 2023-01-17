@@ -8,10 +8,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
 const app = express();
 const { readFile } = require('fs').promises;
+app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.send(yield readFile('./index.html', 'utf8'));
+    res.send(yield readFile('./build/output.css', 'utf8'));
 }));
+console.log("Running...");
 app.listen(process.env.PORT || 3000);
