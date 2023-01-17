@@ -13,7 +13,8 @@
   "main": "build/index.js",
   "scripts": {
     "test": "test",
-    "start": "tsc && node ./build/index.js",
-    "dev": "nodemon ./build/index.js"
+    "start": "node ./build/index.js",
+    "dev": "nodemon ./build/index.js",
+    "build": "tsc && npx postcss style.css -o build/output.css"
   }
 }
