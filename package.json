@@ -15,6 +15,6 @@
     "test": "test",
     "start": "node ./build/index.js",
     "dev": "nodemon ./build/index.js",
-    "build": "tsc && npx postcss src/style.css -o build/output.css"
+    "build": "tsc && npx postcss ./src/style.css -o ./build/output.css"
   }
 }

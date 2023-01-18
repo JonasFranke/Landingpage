@@ -12,43 +12,32 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const express = require('express');
-const app = express();
+const express_1 = __importDefault(require("express"));
 const fs_1 = __importDefault(require("fs"));
-app.use(express.static('./build'));
-function logDataToFile(data) {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            yield fs_1.default.promises.appendFile('./log.txt', data);
-            console.log("Request logged to file.");
-        }
-        catch (err) {
-            console.error(err);
-        }
-    });
-}
+const log_1 = require("./log");
+const app = (0, express_1.default)();
+app.use(express_1.default.static('./build'));
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     console.log('GET from' + req.ip);
     try {
         let statusCode;
         if ((_a = req.header('User-Agent')) === null || _a === void 0 ? void 0 : _a.includes('Mobile')) {
-            console.log('Mobile');
-            statusCode = 503;
-            res.status(statusCode).send("Mobile site still in development");
-        }
-        else {
-            console.log('Desktop');
-            const html = yield fs_1.default.promises.readFile('./index.html', 'utf8');
+            const html = yield fs_1.default.promises.readFile('./src/index-mobile.html', 'utf8');
             statusCode = 200;
             res.status(statusCode).send(html);
         }
-        logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
+        else {
+            const html = yield fs_1.default.promises.readFile('./src/index.html', 'utf8');
+            statusCode = 200;
+            res.status(statusCode).send(html);
+        }
+        yield (0, log_1.logDataToFile)(statusCode + ": User-Agent: " + req.header('User-Agent'));
     }
     catch (e) {
         console.log(e);
         res.status(500).send("Internal server error");
-        yield logDataToFile(500 + ": " + e);
+        yield (0, log_1.logDataToFile)(500 + ": " + e);
     }
 }));
 console.log("Running... http://localhost:" + process.env.PORT || 3000);
