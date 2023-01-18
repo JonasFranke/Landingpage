@@ -35,16 +35,15 @@ app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         if ((_a = req.header('User-Agent')) === null || _a === void 0 ? void 0 : _a.includes('Mobile')) {
             console.log('Mobile');
             statusCode = 503;
-            logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
             res.status(statusCode).send("Mobile site still in development");
         }
         else {
             console.log('Desktop');
             const html = yield fs_1.default.promises.readFile('./index.html', 'utf8');
             statusCode = 200;
-            logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
             res.status(statusCode).send(html);
         }
+        logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
     }
     catch (e) {
         console.log(e);

@@ -22,15 +22,15 @@ app.get('/', async (req: Request, res: Response) => {
         if (req.header('User-Agent')?.includes('Mobile')) {
             console.log('Mobile');
             statusCode = 503;
-            logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
             res.status(statusCode).send("Mobile site still in development");
         } else {
             console.log('Desktop');
             const html = await fs.promises.readFile('./index.html', 'utf8');
             statusCode = 200;
-            logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
             res.status(statusCode).send(html);
         }
+
+        logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
 
     } catch (e) {
         console.log(e);
