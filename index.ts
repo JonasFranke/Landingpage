@@ -7,7 +7,7 @@ app.use(express.static('./build'));
 
 async function logDataToFile(data: string) {
     try {
-      await fs.promises.appendFile('log.txt', data);
+      await fs.promises.appendFile('./log.txt', data);
       console.log("Request logged to file.");
     } catch (err) {
       console.error(err);
