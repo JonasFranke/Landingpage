@@ -1,7 +1,7 @@
-import {request, Request, Response} from "express";
-const express = require('express');
-const app = express();
+import {Request, Response} from "express";
+import express from "express";
 import fs from 'fs';
+const app = express();
 
 app.use(express.static('./build'));
 
@@ -25,12 +25,12 @@ app.get('/', async (req: Request, res: Response) => {
             res.status(statusCode).send("Mobile site still in development");
         } else {
             console.log('Desktop');
-            const html = await fs.promises.readFile('./index.html', 'utf8');
+            const html = await fs.promises.readFile('./src/index.html', 'utf8');
             statusCode = 200;
             res.status(statusCode).send(html);
         }
 
-        logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
+        await logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
 
     } catch (e) {
         console.log(e);
