@@ -26,7 +26,8 @@ app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         }
         else {
             console.log('Desktop');
-            res.send(yield fs_1.default.promises.readFile('./index.html', 'utf8'));
+            const html = yield fs_1.default.promises.readFile('./index.html', 'utf8');
+            res.send(html);
         }
     }
     catch (e) {
