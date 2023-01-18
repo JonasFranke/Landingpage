@@ -16,23 +16,40 @@ const express = require('express');
 const app = express();
 const fs_1 = __importDefault(require("fs"));
 app.use(express.static('./build'));
+function logDataToFile(data) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            yield fs_1.default.promises.appendFile('./log.txt', data);
+            console.log("Request logged to file.");
+        }
+        catch (err) {
+            console.error(err);
+        }
+    });
+}
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     console.log('GET from' + req.ip);
     try {
+        let statusCode;
         if ((_a = req.header('User-Agent')) === null || _a === void 0 ? void 0 : _a.includes('Mobile')) {
             console.log('Mobile');
-            res.status(500).send("Mobile site still in development");
+            statusCode = 503;
+            logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
+            res.status(statusCode).send("Mobile site still in development");
         }
         else {
             console.log('Desktop');
             const html = yield fs_1.default.promises.readFile('./index.html', 'utf8');
-            res.send(html);
+            statusCode = 200;
+            logDataToFile(statusCode + ": User-Agent: " + req.header('User-Agent'));
+            res.status(statusCode).send(html);
         }
     }
     catch (e) {
         console.log(e);
         res.status(500).send("Internal server error");
+        yield logDataToFile(500 + ": " + e);
     }
 }));
 console.log("Running... http://localhost:" + process.env.PORT || 3000);
