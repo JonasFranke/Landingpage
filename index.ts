@@ -5,6 +5,15 @@ import fs from 'fs';
 
 app.use(express.static('./build'));
 
+async function logDataToFile(data: string) {
+    try {
+      await fs.promises.appendFile('log.txt', data);
+      console.log("Request logged to file.");
+    } catch (err) {
+      console.error(err);
+    }
+}
+
 app.get('/', async (req: Request, res: Response) => {
     console.log('GET from' + req.ip);
 
@@ -34,13 +43,4 @@ app.get('/', async (req: Request, res: Response) => {
 console.log("Running... http://localhost:" + process.env.PORT || 3000);
 
 app.listen(process.env.PORT || 3000);
-
-async function logDataToFile(data: string) {
-    try {
-      await fs.promises.appendFile('log.txt', data);
-      console.log("Request logged to file.");
-    } catch (err) {
-      console.error(err);
-    }
-}
 
