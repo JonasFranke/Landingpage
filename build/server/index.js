@@ -16,19 +16,19 @@ const express_1 = __importDefault(require("express"));
 const fs_1 = __importDefault(require("fs"));
 const log_1 = require("./log");
 const app = (0, express_1.default)();
-app.use(express_1.default.static('./build'));
+app.use(express_1.default.static('./build/webpage'));
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     console.log('GET from' + req.ip);
     try {
         let statusCode;
         if ((_a = req.header('User-Agent')) === null || _a === void 0 ? void 0 : _a.includes('Mobile')) {
-            const html = yield fs_1.default.promises.readFile('./src/index-mobile.html', 'utf8');
+            const html = yield fs_1.default.promises.readFile('./src/webpage/index-mobile.html', 'utf8');
             statusCode = 200;
             res.status(statusCode).send(html);
         }
         else {
-            const html = yield fs_1.default.promises.readFile('./src/index.html', 'utf8');
+            const html = yield fs_1.default.promises.readFile('./src/webpage/index.html', 'utf8');
             statusCode = 200;
             res.status(statusCode).send(html);
         }
