@@ -1,4 +1,4 @@
-const button = document.querySelector('#dark-mode-toggle') as HTMLButtonElement;
+const button: HTMLButtonElement = document.querySelector('#dark-mode-toggle') as HTMLButtonElement;
 let darkMode: boolean = true;
 
 function toggleDarkMode() {
