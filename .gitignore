@@ -1,4 +1,8 @@
 node_modules/*
 .idea/*
 
+.env
+
+.next/*
+.next
 log.txt
