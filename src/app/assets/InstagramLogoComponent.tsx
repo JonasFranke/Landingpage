@@ -1,8 +1,8 @@
 const InstagramLogoComponent = () => {
 	return (
-		<>
+		<div className="ml-2">
 			<a href="https://instagram.com/jns.frnk" target="_blank">
-				<svg fill="#000000" width="55" height="55" viewBox="0 0 32 32" id="Camada_1" version="1.1" xmlns="http://www.w3.org/2000/svg" className="hover:fill-gray-500">
+				<svg fill="#000000" width="55" height="55" viewBox="0 0 32 32" id="Camada_1" version="1.1" xmlns="http://www.w3.org/2000/svg" className="hover:fill-gray-500 transition duration-700 ease-in-out">
 					<g>
 					<path d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"/>
 					<path d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8   c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"/>
@@ -10,7 +10,7 @@ const InstagramLogoComponent = () => {
 					</g>
 				</svg>
 			</a>
-		</>
+		</div>
 	)
 };
 
