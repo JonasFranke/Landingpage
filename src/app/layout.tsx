@@ -1,11 +1,14 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Poppins({
+  weight: '400',
+  subsets: ['latin']
+});
 
 export const metadata = {
   title: 'Jonas Franke',
-  description: '',
+  description: 'Offizielle Webseite von Jonas Franke',
 }
 
 export default function RootLayout({
