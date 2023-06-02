@@ -8,7 +8,6 @@ export default function Home() {
       <>
         <main className="">
             <p className="text-green-700 text-center font-extrabold text-4xl mt-32">Jonas Franke</p>
-            <AnimatedText text="JONAS FRANKE"/>
             <div className="flex justify-center items-center relative mt-32">
                 <GithubLogoComponent githubLink="https://github.com/jonasfranke"/>
                 <InstagramLogoComponent instaLink="https://instagram.com/jns.frnk"/>
