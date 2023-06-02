@@ -1,7 +1,7 @@
 import GithubLogoComponent from "@/app/assets/GithubLogoComponent";
 import InstagramLogoComponent from "@/app/assets/InstagramLogoComponent";
 import Link from "next/link";
-import AnimatedText from "@/app/assets/AnimatedText";
+import SpotifyLogoComponent from "@/app/assets/SpotifyLogoComponent";
 
 export default function Home() {
   return (
@@ -10,8 +10,9 @@ export default function Home() {
             <p className="text-green-700 text-center font-extrabold text-4xl mt-32">Jonas Franke</p>
             <AnimatedText text="JONAS FRANKE"/>
             <div className="flex justify-center items-center relative mt-32">
-                <GithubLogoComponent/>
-                <InstagramLogoComponent/>
+                <GithubLogoComponent githubLink="https://github.com/jonasfranke"/>
+                <InstagramLogoComponent instaLink="https://instagram.com/jns.frnk"/>
+                <SpotifyLogoComponent spotifyLink="https://open.spotify.com/user/313z6mjtm5ngodivuxxaza54rzfu?si=f00d403b755a4046"/>
             </div>
         </main>
         <footer className="bg-gray-950 text-white fixed bottom-0 p-6 sm:p-8 left-0 right-0 flex justify-center">
