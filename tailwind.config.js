@@ -17,9 +17,15 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-5deg)' },
           '50%': { transform: 'rotate(5deg)' }
         },
+        zoomInOut: {
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.25)' },
+          '100%': { transform: 'scale(1)' }
+        }
       },
       animation: {
         wiggle: 'wiggle 0.5s ease-in-out infinite',
+        zoomInOut: 'zoomInOut 0.5s ease-in-out infinite'
       }
     },
   },
