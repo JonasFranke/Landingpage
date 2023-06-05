@@ -6,8 +6,8 @@ import SpotifyLogoComponent from "@/app/assets/SpotifyLogoComponent";
 export default function Home() {
   return (
       <>
-        <main className="">
-            <p className="text-green-700 text-center font-extrabold text-4xl mt-32">Jonas Franke</p>
+        <main className="overflow-hidden">
+            <p className="text-green-700 text-center font-extrabold text-4xl mt-32 hover:animate-zoomInOut">Jonas Franke</p>
             <div className="flex justify-center items-center relative mt-32">
                 <GithubLogoComponent githubLink="https://github.com/jonasfranke"/>
                 <InstagramLogoComponent instaLink="https://instagram.com/jns.frnk"/>
