@@ -8,7 +8,7 @@ interface InstagramLink {
 const InstagramLogoComponent: React.FC<InstagramLink> = ({ instaLink }) => {
 	return (
 		<div className="mx-2 hover:animate-wiggle">
-			<div className="hover:scale-150 transition duration-400">
+			<div className="hover:scale-150 transition duration-700">
 				<Link href={instaLink} target="_blank">
 					<svg fill="#000000" width="55" height="55" viewBox="0 0 32 32" id="Camada_1" version="1.1" xmlns="http://www.w3.org/2000/svg" className="hover:fill-gray-300 transition duration-700 ease-in-out">
 						<title>Instagram</title>

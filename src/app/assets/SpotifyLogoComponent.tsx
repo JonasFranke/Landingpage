@@ -8,7 +8,7 @@ interface SpotifyLink {
 const SpotifyLogoComponent: React.FC<SpotifyLink> = ({ spotifyLink }) => {
     return (
         <div className="mx-2 hover:animate-wiggle">
-            <div className="hover:scale-150 transition duration-400">
+            <div className="hover:scale-150 transition duration-700">
                 <Link href={spotifyLink} target="_blank">
                     <svg fill="#000000" width="45" height="45" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" className="hover:fill-gray-300 transition duration-700 ease-in-out">
                         <title>Spotify</title>
