@@ -8,7 +8,7 @@ export default function Home() {
       <>
         <main className="overflow-hidden">
             <p className="text-green-700 text-center font-extrabold text-4xl mt-32 hover:animate-zoomInOut">Jonas Franke</p>
-            <div className="flex justify-center items-center relative mt-32">
+            <div className="flex justify-center items-center relative mt-32 p-5">
                 <GithubLogoComponent githubLink="https://github.com/jonasfranke"/>
                 <InstagramLogoComponent instaLink="https://instagram.com/jns.frnk"/>
                 <SpotifyLogoComponent spotifyLink="https://open.spotify.com/user/313z6mjtm5ngodivuxxaza54rzfu?si=f00d403b755a4046"/>
