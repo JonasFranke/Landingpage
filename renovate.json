@@ -5,15 +5,9 @@
   ],
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "*"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch"
+      "depTypeList": ["devDependencies", "dependencies"],
+      "packageManager": "pnpm",
+      "datasourceTemplate": "github-actions"
     }
   ]
 }
