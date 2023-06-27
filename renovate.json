@@ -15,8 +15,7 @@
       "groupName": "all non-major dependencies",
       "groupSlug": "all-minor-patch",
       "automerge": true,
-      "automergeType": "pr",
-      "automergeBranchPattern": "renovate/automerge"
+      "automergeType": "pr"
     },
     {
       "matchPackagePatterns": [
