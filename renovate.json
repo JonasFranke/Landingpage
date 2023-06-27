@@ -17,3 +17,37 @@
     }
   ]
 }
+
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        ""
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "automerge": true,
+      "automergeType": "pr",
+      "automergeBranchPattern": "renovate/automerge"
+    },
+    {
+      "matchPackagePatterns": [
+        ""
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "all major dependencies",
+      "groupSlug": "all-major",
+      "automerge": false
+    }
+  ]
+  }
