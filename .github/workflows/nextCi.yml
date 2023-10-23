@@ -14,7 +14,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.1.1
     - name: install Node.js
-      uses: actions/setup-node@v3.8.1
+      uses: actions/setup-node@v3.8.2
       with:
         node-version: 16
     - uses: pnpm/action-setup@v2.4.0
