@@ -16,7 +16,7 @@ jobs:
     - name: install Node.js
       uses: actions/setup-node@v4.0.0
       with:
-        node-version: 16
+        node-version: 20
     - uses: pnpm/action-setup@v2.4.0
       name: Install pnpm
       id: pnpm-install
