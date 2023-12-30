@@ -3,11 +3,13 @@ import Link from "next/link";
 
 interface InstagramLink {
 	instaLink: string;
+	onMouseEnter?: () => void;
+	onMouseLeave?: () => void;
 }
 
-const InstagramLogoComponent: React.FC<InstagramLink> = ({ instaLink }) => {
+const InstagramLogoComponent: React.FC<InstagramLink> = ({ instaLink, onMouseEnter, onMouseLeave }) => {
 	return (
-		<div className="mx-2 hover:animate-wiggle">
+		<div className="mx-2 hover:animate-wiggle" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 			<div className="hover:scale-150 transition duration-700">
 				<Link href={instaLink} target="_blank">
 					<svg fill="#000000" width="55" height="55" viewBox="0 0 32 32" id="Camada_1" version="1.1" xmlns="http://www.w3.org/2000/svg" className="hover:fill-gray-300 transition duration-700 ease-in-out">
