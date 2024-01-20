@@ -5,6 +5,7 @@ import Link from "next/link";
 import SpotifyLogoComponent from "@/app/assets/SpotifyLogoComponent";
 import React, { useState } from "react";
 import GithubDetailsComponent from "@/app/assets/GithubDetailsComponent";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
 
@@ -15,6 +16,7 @@ export default function Home() {
 
   return (
       <>
+          <SpeedInsights />
           <main className="overflow-hidden">
               <p className="text-green-700 text-center font-extrabold text-4xl mt-32 hover:animate-zoomInOut">Jonas
                   Franke</p>
