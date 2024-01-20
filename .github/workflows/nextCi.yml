@@ -2,7 +2,7 @@ name: Next.JS Ci
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "*" ]
   pull_request:
     branches: [ "master" ]
 
@@ -13,32 +13,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4.1.1
-    - name: install Node.js
-      uses: actions/setup-node@v4.0.1
-      with:
-        node-version: 20
-    - uses: pnpm/action-setup@v2.4.0
-      name: Install pnpm
-      id: pnpm-install
-      with:
-        version: 7
-        run_install: false
-    - name: Get pnpm store directory
-      id: pnpm-cache
-      shell: bash
-      run: |
-        echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
-    - uses: actions/cache@v4.0.0
-      name: Setup pnpm cache
-      with:
-        path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-pnpm-store-
-
+    - name: Install bun
+      uses: oven-sh/setup-bun@v1
     - name: Install dependencies
-      run: pnpm install --no-frozen-lockfile
-
-    - name: Build Next.js app
-      run: pnpm build
+      run: bun install
+    - name: Build app
+      run: bun run build
