@@ -3,11 +3,13 @@ import Link from "next/link";
 
 interface GithubLink {
 	githubLink: string;
+	onMouseEnter?: () => void;
+	onMouseLeave?: () => void;
 }
 
-const GithubLogoComponent: React.FC<GithubLink> = ({ githubLink }) => {
+const GithubLogoComponent: React.FC<GithubLink> = ({ githubLink, onMouseEnter, onMouseLeave }) => {
 	return (
-		<div className="mx-2 hover:animate-wiggle">
+		<div className="mx-2 hover:animate-wiggle" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
 			<div className="hover:scale-150 transition duration-700">
 				<Link href={githubLink} target="_blank">
 					<svg height="45" width="45" aria-hidden="true" viewBox="0 0 16 16" data-view-component="true" className="hover:fill-gray-300 transition duration-700 ease-in-out">
