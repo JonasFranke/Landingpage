@@ -14,5 +14,5 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-If you found a vulnerability you can create an issue an send an email to 
+If you found a vulnerability you can create an issue an send an email to
 [info@jonasfranke.xyz](mailto:info@jonasfranke.xyz)
