@@ -4,7 +4,9 @@ const Page = () => {
   return (
     <div className="text-white m-2">
       <Link href="/">
-        <button className="bg-blue-500 rounded p-2">Zurück</button>
+        <button className="bg-blue-500 rounded p-2" type="button">
+          Zurück
+        </button>
       </Link>
       <h1 className="text-2xl font-bold mb-3 mt-5">Impressum</h1>
       <p>Angaben gemäß § 5 TMG</p>

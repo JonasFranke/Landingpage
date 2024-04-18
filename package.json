@@ -6,15 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prettier": "bunx prettier . --write"
+    "lint": "biome lint ./src",
+    "format": "biome format --write ./src",
+    "prepare": "husky"
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.5",
     "autoprefixer": "10.4.19",
-    "eslint": "9.0.0",
-    "eslint-config-next": "14.2.2",
     "next": "14.2.2",
     "postcss": "8.4.38",
     "react": "18.2.0",
@@ -23,9 +22,11 @@
     "typescript": "5.4.5"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.7.0",
     "@types/bun": "^1.0.2",
+    "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
-    "prettier": "3.2.5",
-    "@types/react": "18.2.79"
-  }
+    "husky": "^9.0.11"
+  },
+  "trustedDependencies": ["@biomejs/biome"]
 }
