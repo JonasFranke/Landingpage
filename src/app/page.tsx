@@ -88,8 +88,9 @@ export default function Home() {
           </p>
         </div>
         <div
-          className={`transition-all duration-500 delay-200 ${fadeOut ? "opacity-0" : "opacity-100"
-            }`}
+          className={`transition-all duration-500 delay-200 ${
+            fadeOut ? "opacity-0" : "opacity-100"
+          }`}
         >
           <p className="flex justify-center text-white">
             {hoveredLogo ? hoveredLogo : ""}
