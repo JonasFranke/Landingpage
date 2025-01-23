@@ -119,7 +119,7 @@ export default function Home() {
           ©2025 Jonas Franke
         </p>
         <Link href="/imprint" className="fixed right-3">
-          <button className="bg-blue-600 rounded p-1.5" type="button">
+          <button className="bg-blue-600 rounded-sm p-1.5" type="button">
             Impressum
           </button>
         </Link>
