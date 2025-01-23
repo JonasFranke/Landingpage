@@ -4,7 +4,7 @@ const Page = () => {
   return (
     <div className="text-white m-2">
       <Link href="/">
-        <button className="bg-blue-500 rounded p-2" type="button">
+        <button className="bg-blue-500 rounded-sm p-2" type="button">
           Zurück
         </button>
       </Link>
