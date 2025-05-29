@@ -18,7 +18,8 @@
           ];
 
           shellHook = ''
-            echo "Bun $(bun --version) is ready!"
+            echo "Bun $(bun --version) is ready!" &&
+            export BIOME_BINARY=$(which biome)
           '';
         };
 
