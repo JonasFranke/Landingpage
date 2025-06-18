@@ -1,12 +1,12 @@
 "use client";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Link from "next/link";
+import { useState } from "react";
 import GithubDetailsComponent from "@/app/assets/GithubDetailsComponent";
 import GithubLogoComponent from "@/app/assets/GithubLogoComponent";
 import InstagramLogoComponent from "@/app/assets/InstagramLogoComponent";
 import SpotifyLogoComponent from "@/app/assets/SpotifyLogoComponent";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import Link from "next/link";
-import React, { useState } from "react";
 
 export default function Home() {
   const [hoveredLogo, setHoveredLogo] = useState<string | null>(null);
