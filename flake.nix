@@ -3,14 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    biomepkg.url = "github:isabelroses/nixpkgs/biome-2";
   };
 
-  outputs = { self, nixpkgs, biomepkg, ... }@inputs: 
+  outputs = { self, nixpkgs, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      biome = biomepkg.legacyPackages.${system};
     in
     {
 
@@ -18,8 +16,7 @@
           nativeBuildInputs = [
             pkgs.bun
             pkgs.nodejs_24
-            biome.biome
-            pkgs.ffmpeg
+            pkgs.biome
           ];
 
           shellHook = ''
