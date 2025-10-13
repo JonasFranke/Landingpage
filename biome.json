@@ -25,6 +25,11 @@
     "enabled": true,
     "domains": {
       "next": "recommended"
+    },
+    "rules": {
+      "suspicious": {
+        "noUnknownAtRules": "warn"
+      }
     }
   },
   "javascript": {
