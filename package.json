@@ -16,10 +16,10 @@
     "@vercel/analytics": "^2.0.0",
     "@vercel/speed-insights": "^2.0.0",
     "babel-plugin-react-compiler": "1.0.0",
-    "next": "16.2.4",
+    "next": "16.2.5",
     "postcss": "8.5.14",
-    "react": "19.2.5",
-    "react-dom": "19.2.5",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
     "tailwindcss": "^4.0.0",
     "typescript": "5.9.3"
   },
