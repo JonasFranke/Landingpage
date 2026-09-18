@@ -21,7 +21,7 @@ const GithubLogoComponent: React.FC<GithubLink> = ({
       onMouseLeave={onMouseLeave}
     >
       <div className="hover:scale-150 transition duration-700">
-        <Link href={githubLink} target="_blank">
+        <Link href={githubLink} target="_blank" rel="noopener noreferrer">
           <SiGithub
             size={45}
             className="hover:fill-gray-300 transition duration-700 ease-in-out"

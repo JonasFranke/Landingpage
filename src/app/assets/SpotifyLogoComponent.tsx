@@ -21,7 +21,7 @@ const SpotifyLogoComponent: React.FC<SpotifyLink> = ({
       onMouseLeave={onMouseLeave}
     >
       <div className="hover:scale-150 transition duration-700">
-        <Link href={spotifyLink} target="_blank">
+        <Link href={spotifyLink} target="_blank" rel="noopener noreferrer">
           <SiSpotify
             size={45}
             className="hover:fill-gray-300 transition duration-700 ease-in-out"

@@ -63,7 +63,7 @@ export default function Home() {
             }}
           />
           <SpotifyLogoComponent
-            spotifyLink="https://open.spotify.com/user/313z6mjtm5ngodivuxxaza54rzfu?si=f00d403b755a4046"
+            spotifyLink="https://open.spotify.com/user/313z6mjtm5ngodivuxxaza54rzfu"
             onMouseEnter={() => {
               setHoveredLogo("Spotify");
               setFadeOut(false);

@@ -2,17 +2,16 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Only the latest deployed version of this site is actively maintained.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Version | Supported |
+|---------|-----------|
+| latest  | ✅        |
 
 ## Reporting a Vulnerability
 
-If you found a vulnerability you can create an issue an send an email to
-[info@jonasfranke.xyz](mailto:info@jonasfranke.xyz)
+If you found a vulnerability, please email
+[info@jonasfranke.xyz](mailto:info@jonasfranke.xyz) with the details.
+
+Please do **not** open a public GitHub issue for security vulnerabilities.
+Expect a response within 7 days.

@@ -21,7 +21,7 @@ const InstagramLogoComponent: React.FC<InstagramLink> = ({
       onMouseLeave={onMouseLeave}
     >
       <div className="hover:scale-150 transition duration-700">
-        <Link href={instaLink} target="_blank">
+        <Link href={instaLink} target="_blank" rel="noopener noreferrer">
           <SiInstagram
             size={45}
             className="hover:fill-gray-300 transition duration-700 ease-in-out"
