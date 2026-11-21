@@ -5,7 +5,7 @@
 Only the latest deployed version of this site is actively maintained.
 
 | Version | Supported |
-|---------|-----------|
+| ------- | --------- |
 | latest  | ✅        |
 
 ## Reporting a Vulnerability
