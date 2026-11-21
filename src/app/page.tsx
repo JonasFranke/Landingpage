@@ -116,7 +116,7 @@ export default function Home() {
       </main>
       <footer className="bg-gray-950 text-white fixed bottom-0 p-6 sm:p-8 left-0 right-0 flex justify-center">
         <p className="font-mono text-green-500 sm:text-xs">
-          ©2025 Jonas Franke
+          ©2026 Jonas Franke
         </p>
         <Link href="/imprint" className="fixed right-3">
           <button className="bg-blue-600 rounded-sm p-1.5" type="button">
